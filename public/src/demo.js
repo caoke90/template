@@ -22,18 +22,14 @@ define(function(require, exports, module) {
         dragula([$('#left1')[0], $('#right1')[0]],{copy:true})
             .on("cloned",function(copy,ele){
                 cc.log("cloned")
+                $(copy).html($(ele).html()+" cloned")
+                cc.log(copy)
+            })
+        dragula([$('#right1')[0]],{removeOnSpill:true})
+            .on("cloned",function(copy,ele){
+                cc.log("cloned")
                 $(copy).html("cloned")
                 cc.log(copy)
-                cc.log(ele)
-            })
-            .on("cancel",function(el,container,handle){
-                //cc.log(el)
-                //cc.log(container)
-                //cc.log(handle)
-            })
-            .on("drop",function(el,container,handle){
-                //cc.log(el)
-                //cc.log(handle)
             })
     })
 
