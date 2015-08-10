@@ -1,0 +1,23 @@
+{
+  "name": "duona",
+  "version": "1.2.0",
+  "description": "duona test",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "duona"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "1.12.3",
+    "cookie-parser": "^1.3.5",
+    "ejs": "2.3.1",
+    "express": "4.12.3",
+    "leanengine": "^0.1.4",
+      "xml2js":"0.4.9",
+      "needle":"0.10.0",
+      "eventproxy":"0.3.4"
+  }
+}

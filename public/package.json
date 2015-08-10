@@ -1,0 +1,11 @@
+{
+  "family": "donut",
+  "name": "rename",
+  "version": "1.0.0",
+
+  "spm": {
+    "alias": {
+    },
+    "output": ["*"]
+  }
+}
