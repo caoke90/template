@@ -17,22 +17,17 @@
     <!--<link rel="stylesheet" href="css/demo.css" media="screen">-->
 
 </head>
-<template>
-    <div class='wrapper'>
-        <div id='left1' class='container'>
-            <div><%=name%></div>
+<body>
+    <div class="col-xs-12">
+        <div class="col-xs-4" id='left1'>
+            <div class="mode"><span>mode1</span></div>
             <div>Moving them anywhere else isn't quite possible</div>
-            <div>There's also the possibility of moving elements around in the same container, changing their position</div>
         </div>
-        <div id='right1' class='container'>
-            <div>This is the default use case. You only need to specify the containers you want to use</div>
-            <div>More interactive use cases lie ahead</div>
-            <div>Make sure to check out the <a href='https://github.com/bevacqua/dragula#readme'>documentation on GitHub!</a></div>
+        <div class="col-xs-8" id="right1">
+            <div>mode1</div>
+            <div>Moving them anywhere else isn't quite possible</div>
         </div>
     </div>
-</template>
-<body>
-
 </body>
 <script src="sea-modules/seajs/seajs/2.1.1/sea.js"></script>
 <script src="src/config.js"></script>
