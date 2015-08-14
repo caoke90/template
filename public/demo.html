@@ -14,27 +14,41 @@
     <!--[if lt IE 9]>
     <script src="http://cdn.bootcss.com/html5shiv/3.6.2/html5shiv.js"></script>
     <![endif]-->
-    <!--<link rel="stylesheet" href="css/demo.css" media="screen">-->
-
+    <link rel="stylesheet" href="css/bootstrap-combined.min.css" media="screen">
+    <link rel="stylesheet" href="css/demo.css" media="screen">
 </head>
 <body>
-<html>
-<body>
-<div class="col-xs-8" id="right1">
+<div class="block" jsui="demo">
+    <span>dfs</span>
+    <div class="col-xs-8 " jsui="demo">
+        <div>mode1</div>
+        <div>Moving them anywhere else isn't quite possible</div>
+    </div>
+</div>
+<div class="col-xs-8" jsui="demo">
     <div>mode1</div>
     <div>Moving them anywhere else isn't quite possible</div>
 </div>
-</body>
-</html>
 
-<div class="col-xs-4" id='left1' style="position:absolute;bottom: 20px;left: 0;">
-    <div class="mode"><span>mode1</span></div>
+<div class="col-xs-8" jsui="demo">
+    <div>mode1</div>
     <div>Moving them anywhere else isn't quite possible</div>
 </div>
+
+<div class="col-xs-8" jsui="demo">
+    <div>mode1</div>
+    <div>Moving them anywhere else isn't quite possible</div>
+</div>
+
+<div class="col-xs-8" jsui="demo">
+    <div>mode1</div>
+    <div>Moving them anywhere else isn't quite possible</div>
+</div>
+
 </body>
+<script src="sea-modules/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="sea-modules/bootstrap/bootstrap.min.js"></script>
 <script src="sea-modules/seajs/seajs/2.1.1/sea.js"></script>
 <script src="src/config.js"></script>
-<script>
-    seajs.use('{mode}/demo');
-</script>
+
 </html>

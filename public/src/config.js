@@ -10,3 +10,7 @@ seajs.config({
 //        ['donut/rename/1.0.0', '../dist']
     ]
 });
+$("[jsui]").each(function(){
+    var mode=$(this).attr("jsui").replace(" ","")
+    seajs.use("{mode}/"+mode)
+})
