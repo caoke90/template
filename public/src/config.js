@@ -26,6 +26,3 @@ jsui()
 $("body").click(function(){
     jsui()
 })
-$("#add").click(function(){
-    $("body").append($("[jsui=demo]").eq(0).clone())
-})

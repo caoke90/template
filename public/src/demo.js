@@ -19,7 +19,9 @@ define(function(require, exports, module) {
         .on("drop",function(copy,ele){
             cc.log("drop")
         })
-
+    $("#add").click(function(){
+        $("body").append($("[jsui=demo]").eq(0).clone())
+    })
     module.exports=function(e){
         sp.containers.push(e)
     }
