@@ -10,7 +10,22 @@ seajs.config({
 //        ['donut/rename/1.0.0', '../dist']
     ]
 });
-$("[jsui]").each(function(){
-    var mode=$(this).attr("jsui").replace(" ","")
-    seajs.use("{mode}/"+mode)
+jsui=function(){
+    $("[jsui]").each(function(e){
+        var the=this
+        if(!the.jsui){
+            var mode=$(this).attr("jsui").replace(" ","")
+            seajs.use("{mode}/"+mode,function(func){
+                the.jsui=true
+                func(the)
+            })
+        }
+    })
+}
+jsui()
+$("body").click(function(){
+    jsui()
+})
+$("#add").click(function(){
+    $("body").append($("[jsui=demo]").eq(0).clone())
 })

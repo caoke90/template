@@ -6,6 +6,7 @@ body{
     font-family: "microsoft yahei";
     font-size: 14px;
 }
+
 img {
     width: 100%;
     margin-bottom: 10px;
@@ -33,10 +34,7 @@ h3 {
     color: #fff;
     margin-bottom: 10px;
 }
-/* line 661, ../sass/page1.scss */
-.block {
-    margin-bottom: 10px;
-}
+
 /* line 664, ../sass/page1.scss */
 section {
     text-align: center;
@@ -54,4 +52,35 @@ p {
 }
 .none{
     display: none;
+}
+.top{
+    width: 100%;
+}
+.left{
+    width: 22%;
+    float: left;
+}
+.right{
+    float: left;
+    width: 78%;
+}
+/* line 661, ../sass/page1.scss */
+.blo1,.blo2,.blo3,.blo4,.blo5,.blo6,.blo7,.blo8,.blo9,.blo10,.blo11,.blo12 {
+    margin-bottom: 10px;
+    float: left;
+}
+.blo12{
+    width:100%;
+}
+.blo6{
+    width:50%;
+}
+.blo4{
+    width:33%;
+}
+.blo3{
+    width:25%;
+}
+.blo2{
+    width:16%;
 }
