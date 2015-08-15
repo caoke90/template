@@ -84,3 +84,10 @@ p {
     float: left;
     width: 78%;
 }
+.l{
+    float: left;
+}
+.r{
+    float: right;
+}
+.red{border: 1px solid red;}

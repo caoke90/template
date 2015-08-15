@@ -2,11 +2,11 @@ cc=console
 seajs.config({
     preload:["jquery","seajs-text.js"],
     vars: {
-        'mode': 'donut/rename/1.0.0'
+        'jsui': 'donut/rename/1.1.0'
     },
     map: [
 //        ['donut/rename/1.0.0', '../donut/1.0.0']
-        ['donut/rename/1.0.0', '../src']
+//        ['donut/rename/1.1.0', '../src']
 //        ['donut/rename/1.0.0', '../dist']
     ]
 });
@@ -15,7 +15,7 @@ jsui=function(){
         var the=this
         if(!the.jsui){
             var mode=$(this).attr("jsui").replace(" ","")
-            seajs.use("{mode}/"+mode,function(func){
+            seajs.use("{jsui}/"+mode,function(func){
                 the.jsui=true
                 func(the)
             })
