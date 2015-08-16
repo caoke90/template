@@ -22,7 +22,7 @@ define('donut/rename/1.1.0/drag',function(require, exports, module) {
         })
         .on("out",function(copy,ele){
             cc.log("out")
-            $(copy).addClass("red")
+            //$(copy).addClass("red")
         })
         .on("over",function(copy,ele){
             cc.log("over")
