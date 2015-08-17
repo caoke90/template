@@ -14,7 +14,7 @@
     <!--[if lt IE 9]>
     <script src="http://cdn.bootcss.com/html5shiv/3.6.2/html5shiv.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="css/bootstrap-combined.min.css" media="screen">
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" href="css/demo.css" media="screen">
 
 </head>
@@ -32,23 +32,42 @@
     </div>
 
 </div>
-<div id="mode1">model</div>
+<div class="none">
+    <code class="template">
+        <div class="block">
+            <div class="title">标题</div>
+        </div>
+    </code>
+    <code class="template">
+        <div class="title1"></div>
+    </code>
+    <code class="template">
+        <div class="title2"></div>
+    </code>
+    <code class="template">
+        <div class="title3"></div>
+    </code>
+    <code class="template">
+        <div class="title4"></div>
+    </code>
+</div>
+
 <div class="left blo3" jsui="drag">
-    <div class="blo12">
-        <div class="l">12</div>
-        <div class="l add">click</div>
+    <div class="blo12" query=".template:eq(0)">
+        <div class="l">标题1</div>
+        <span class="glyphicon-plus"></span>
     </div>
-    <div class="blo12">
-        <div>  布局元素</div>
-        <div>Moving them anywhere else isn't quite possible</div>
+    <div class="blo12" query=".template:eq(1)">
+        <div class="l">标题2</div>
+        <span class="glyphicon-plus"></span>
     </div>
-    <div class="blo12">
-        <div>  布局元素</div>
-        <div>Moving them anywhere else isn't quite possible</div>
+    <div class="blo12" query=".template:eq(2)">
+        <div class="l">标题3</div>
+        <span class="glyphicon-plus"></span>
     </div>
-    <div class="blo12">
-        <div>  布局元素</div>
-        <div>Moving them anywhere else isn't quite possible</div>
+    <div class="blo12" query=".template:eq(3)">
+        <div class="l">标题4</div>
+        <span class="glyphicon-plus"></span>
     </div>
 </div>
 <div class="right" jsui="drag">
@@ -75,7 +94,7 @@
 <script src="sea-modules/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="sea-modules/bootstrap/bootstrap.min.js"></script>
 <script src="sea-modules/seajs/seajs/2.1.1/sea.js"></script>
-<script src="src/demo.js"></script>
+<!--<script src="src/demo.min.js"></script>-->
 <script src="src/config.js"></script>
 
 </html>

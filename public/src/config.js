@@ -23,6 +23,7 @@ jsui=function(){
     })
 }
 jsui()
+//刷新组件
 $("body").click(function(){
     jsui()
 })
