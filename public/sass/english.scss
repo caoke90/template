@@ -1,0 +1,84 @@
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+@import "glyphicons";
+// Core CSS
+//@import "bootstrap/scaffolding";
+//@import "bootstrap/grid";
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/css3/animation";
+@import "compass/css3/transform";
+@import "compass/css3/opacity";
+
+@function rem($px){//$px为需要转换的字号
+  @return $px / 2 * 1px;
+}
+
+body{
+  font-family: "Microsoft Yahei";
+  background: #ffc600;
+}
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.abs{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.guanzhu{
+  position: fixed;
+  right: 0;
+  top: 10px;
+  background: #feeda6;
+  width: rem(300);
+  padding: rem(20);
+  @include border-radius(5px);
+  .fui-triangle-up-small{
+    position: absolute;
+    top: -10px;
+    right: 0;
+  }
+}
+
+
+.page{display: none;width: rem(640);margin: 0 auto;}
+
+.title10{
+  padding-top: 10px;
+  text-align: center;
+}
+.foot10{
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+.info11{
+  background: inline-image("../images/english/kuang11.png") no-repeat;
+  background-size: 100%;
+  background-color: #fff;
+  @include border-radius(20px);
+  margin: 8px;
+  min-height: 300px;
+ padding: 0 15px;
+  padding-left: 25px;
+  color: #9a460d;
+  font-size: 22px;
+  @include box-shadow(#e23521 0px 5px 0px);
+  font-family: "FZY4JW";
+  h1{
+    padding-top: 70px;
+  }
+  p{
+    line-height: 40px;
+  }
+}
+.next11{
+  margin-bottom: 20px;
+text-align: center;
+}

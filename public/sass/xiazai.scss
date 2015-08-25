@@ -1,0 +1,58 @@
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+//@import "glyphicons";
+// Core CSS
+//@import "bootstrap/scaffolding";
+//@import "bootstrap/grid";
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/css3/animation";
+@import "compass/css3/transform";
+@import "compass/css3/opacity";
+
+//下载
+.xiazai{
+  width: 320px;
+  margin: 0 auto;
+  padding: 20px 15px;
+  line-height: 30px;
+  font-family: "microsoft yahei";
+  font-size: 14px;
+  img{
+    width: 100%;
+  margin-bottom: 10px;
+  }
+  a{
+    color: #607fa6
+  }
+  .h1{
+    font-size: 22px;
+  }
+  .h2{
+    color: #666;
+    margin-bottom: 10px;
+  }
+  h3{
+    background: rgb(0, 187, 236);
+    text-indent: 10px;
+    @include border-radius(5px);
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  .block{
+    margin-bottom: 10px;
+  }
+  section{
+    text-align: center;
+    background: rgb(228, 236, 77);
+    @include border-radius(50px);
+    margin-bottom: 10px;
+    line-height: 30px;
+  }
+  p{
+    font-size: 14px;
+    padding-left: 10px;
+  }
+}
