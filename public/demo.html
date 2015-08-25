@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>template demo</title>
+    <title>宝宝英文取名神器</title>
     <meta http-equiv="Cache-Control" CONTENT="no-cache">
     <meta http-equiv="Pragma" CONTENT="no-cache">
-    <meta name="description" CONTENT="前端模版">
-    <meta name="keywords" CONTENT="前端模版">
+    <meta name="description" CONTENT="宝宝英文取名神器-新东方在线教育出品">
+    <meta name="keywords" CONTENT="宝宝英文取名神器">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!--<link rel="stylesheet" href="../css/bootstrap.css" media="screen">-->
@@ -14,87 +14,44 @@
     <!--[if lt IE 9]>
     <script src="http://cdn.bootcss.com/html5shiv/3.6.2/html5shiv.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
-    <link rel="stylesheet" href="css/demo.css" media="screen">
-
 </head>
 <body>
-<div class="top blo12">
-    <div class="blo6">
-        <div class="blo2"><span class="btn btn-block" id="add">阿牛</span></div>
-        <div class="blo2"> <span class="btn btn-block ">阿牛</span></div>
-        <div class="blo2">  <span class="btn btn-block ">阿牛</span></div>
-    </div>
-    <div class="blo6">
-        <div class="blo2"><span class="btn btn-block ">阿牛</span></div>
-        <div class="blo2"> <span class="btn btn-block ">阿牛</span></div>
-        <div class="blo2">  <span class="btn btn-block ">阿牛</span></div>
-    </div>
-
-</div>
-<div class="none">
-    <code class="template">
-        <div class="block">
-            <div class="title">标题</div>
+<!--page6-->
+<div class="page page6" jsui="page6" style="display: block;" ms-controller="test">
+    <div class="tip6">我的新东方小伙伴多纳，
+        翻遍大英词典，给我起了最炫
+        英文名！</div>
+    <div class="title6">{{name}}</div>
+    <div class="info6">
+        <span class="btn1 fui-volume">
+             <audio ms-src="http://dict.youdao.com/dictvoice?audio={{name}}&type=2"></audio>
+        </span>
+        <span class="btn2"></span>
+        <a href="page1.html"><span class="btn3"></span></a>
+        <div class="tip">
+            <span class="fui-triangle-up icon1"></span>
+            <h1>{{hanname}}</h1>
+            <div class="info">{{shiyi}}</div>
         </div>
-    </code>
-    <code class="template">
-        <div class="title1"></div>
-    </code>
-    <code class="template">
-        <div class="title2"></div>
-    </code>
-    <code class="template">
-        <div class="title3"></div>
-    </code>
-    <code class="template">
-        <div class="title4"></div>
-    </code>
-</div>
+    </div>
+    <footer>
+        <div class="foot6">
+            <div class="div1"><img src="/images/rename/guanzhu_3.png" /></div>
+            <div class="div2">新东方多纳，<br>
+                您身边的英语启蒙专家！</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MjM5MTI3Mzc3NQ==&mid=207996176&idx=1&sn=fcdb903026b61f9dab84d132a9d6ac96#rd">
+                <div class="div3">
+                    <span>关注多纳</span>
+                </div>
+            </a>
+        </div>
+    </footer>
 
-<div class="left blo3" jsui="drag">
-    <div class="blo12" query=".template:eq(0)">
-        <div class="l">标题1</div>
-        <span class="glyphicon-plus"></span>
-    </div>
-    <div class="blo12" query=".template:eq(1)">
-        <div class="l">标题2</div>
-        <span class="glyphicon-plus"></span>
-    </div>
-    <div class="blo12" query=".template:eq(2)">
-        <div class="l">标题3</div>
-        <span class="glyphicon-plus"></span>
-    </div>
-    <div class="blo12" query=".template:eq(3)">
-        <div class="l">标题4</div>
-        <span class="glyphicon-plus"></span>
-    </div>
 </div>
-<div class="right" jsui="drag">
-    <div class="blo12">
-        <div>mode1</div>
-        <div>Moving them anywhere else isn't quite possible</div>
-    </div>
-    <div class="blo12">
-        <div>mode1</div>
-        <div>Moving them anywhere else isn't quite possible</div>
-    </div>
-    <div class="blo12">
-        <div>mode1</div>
-        <div>Moving them anywhere else isn't quite possible</div>
-    </div>
-    <div class="blo12">
-        <div>mode1</div>
-        <div>Moving them anywhere else isn't quite possible</div>
-    </div>
-</div>
-
-
+<link rel="stylesheet" href="/css/rename.css" media="screen">
+<script src="/js/avalon.mobile.min.js" data-main="/src/main"></script>
+<script>
+    require(["../src/test"])
+</script>
 </body>
-<script src="sea-modules/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="sea-modules/bootstrap/bootstrap.min.js"></script>
-<script src="sea-modules/seajs/seajs/2.1.1/sea.js"></script>
-<!--<script src="src/demo.min.js"></script>-->
-<script src="src/config.js"></script>
-
 </html>
