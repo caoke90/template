@@ -11,7 +11,7 @@ needle=require("./Api.needle")
 
 weixin=require("./Api.weixin")
 
-var Api=module.exports
+Api=module.exports
 
 Api.use$Path=function(router,path){
     var fs=require("fs")

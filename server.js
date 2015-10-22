@@ -1,6 +1,6 @@
 'use strict';
 
-var Api=require("./Api")
+require("./Api")
 
 var app = require('./app');
 

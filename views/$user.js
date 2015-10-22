@@ -1,27 +1,20 @@
 //异步公共代码!
 var router = require('express').Router();
-router.getAsync = function (path, handler) {
-    router.get(path, function (req, res, next) {
-        handler(req, res, next).start();
-    });
-}
 module.exports = router;
-var Wind = require("wind")
-
-//公共模块
 var Api=require("../Api")
-
-var AV=require("leanengine")
-router.use(AV.Cloud.CookieSession({ secret: 'donut',fetchUser:true}));
+Api.use$Path(router,__dirname)
+Api.useWindjs(router)
+Api.useCookieSession(router)
 
 router.getAsync("/logIn",eval(Wind.compile("async", function (req, res) {
-    AV.User.logIn("test123", "test123", {
+    AV.User.logIn("test", "test", {
         success: function(user) {
             // 成功了，现在可以做其他事情了.
             cc.log("ok")
             res.jsonp(user)
         },
         error: function(user, error) {
+            cc.log("fail")
             // 失败了.
             res.jsonp(error)
         }
