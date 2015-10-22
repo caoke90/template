@@ -1,0 +1,12 @@
+@function rem($px){//$px为需要转换的字号
+  @return $px/40 * 1rem;
+}
+html{
+  font-size: 40px;
+  font-size: 6.25vw;
+}
+@media screen and (min-width:780px){
+  html{
+    font-size: 40px;
+  }
+}

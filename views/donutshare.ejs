@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/share.js"></script>
+    <title>多纳学英语</title>
+
+    <script>
+        $(document).ready(function(){
+            var jheight= $(window).height();
+            var jwidth= $(window).width();
+            $("#heightandwidth").text('宽度:'+jwidth+'高度:'+jheight);
+        })
+    </script>
+
+    <style>
+        #zan{
+            margin:0px 0px 0px auto;
+            width:31px; /* 必须制定宽度 */
+            height:28px;
+        }
+        #zan2{
+            alignment: right;
+            width: 31px;
+            width: 28px;
+        }
+        #zan3{
+            margin: 0px auto;
+            width: 31px;
+            height: 28px;
+            text-align:center; /* 文字居中 */
+            font-size:20px; /* 文字大小 */
+            color:black; /* 文字颜色 */
+        }
+        #shareFooter{
+            text-align: center;
+            margin-top: 30%;
+        }
+        .downloadbtn {
+            text-align: center;
+            display: inline-block;
+            background: #fe5933;
+            color: #fff;
+            font-size: 30px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            -moz-box-shadow: #e23521 0px 5px 0px;
+            -webkit-box-shadow: #e23521 0px 5px 0px;
+            box-shadow: #e23521 0px 5px 0px;
+            font-family: "FZY4JW";
+            line-height: 57.5px;
+            padding: 0 25px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body style="background-color:RGB(254,197,46)">
+
+<div id="shareFooter">
+    <h4 style="color: RGB(116,41,27);font-size: 20px;">多纳说</h4>
+    <p style=" padding: 0 25px;color: RGB(116,41,27);font-size: 20px">推荐一个好玩好用的儿童双语学习App
+        —多纳学英语</p>
+    <img src="icon_180.png" width="100" height="100">
+    <div>
+        <div class="downloadbtn" onclick="downloadBtClicked()">
+            下载有礼
+        </div>
+    </div>
+    <p id="heightandwidth" style="margin:20px auto;">change</p>
+</div>
+</body>
+</html>

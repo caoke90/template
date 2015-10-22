@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>酷学多纳</title>
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../css/hd1.css" media="screen">
+
+</head>
+<body>
+
+<div class="hd1">
+    <img src="../images/hd1/huodong_1.png" width="100%">
+    <header class="header">
+        <img src="../images/hd1/jiaodiantu_1.png" width="100%">
+    </header>
+    <section>
+        <div class="jianjie">
+            <ul>
+                <li><b></b>活动期间，任意连续3天完成听电台、看视频、练口语的各个版块任务，即可点亮3天完成任务的“领取”图标，点击领取，即可获得5个纳币奖励；任意连续7天完成任务，可再获得10个纳币奖励；任意连续14天完成任务，可再获得15个纳币奖励。</li><br>
+                <li><b></b>活动期间，连续21天完成听电台、看视频、练口语的各个版块任务，即可点亮21天完成任务的“领取”图标，点击领取，即可打开专属你的多纳宝盒，领取一份神秘礼物哦！</li><br>
+
+            </ul>
+            <span></span>
+            <div>倒计时<strong id="lasttime"><%=shengyuDay%></strong>天</div>
+        </div>
+        <div id="lingqu"></div>
+
+        <div class="xuzhi">
+            <ul>
+                <li><b></b>虚拟奖品将在获奖用户领取后实时自动充值到该用户的多纳账户中。</li>
+                <li><b></b>实物奖品的获奖用户需填写真实准确的个人信息，以便于寄送奖品。如因用户信息提供错误或拨打3次电话均无法联系等用户自身原因，而造成的无法收到奖品，将不再补发奖品。
+                </li>
+                <li><b></b>多纳工作人员将统一在活动结束后的10个工作日内联系实物奖品获奖用户，核对用户相关信息后寄出奖品。</li>
+                <li><b></b>新东方多纳对本次活动保留在法律许可范围内最终解释权。</li>
+            </ul>
+            <span></span>
+        </div>
+        <div class="baohe">
+            <img src="../images/hd1/baoheyoushenme.png" width="100%">
+        </div>
+        <div class="huojiangmingdan clearfix">
+            <ul id="lqlist">
+
+            </ul>
+            <span></span>
+            <a href="hd1more.html" class="more"></a>
+        </div>
+        <div class="di"></div>
+
+    </section>
+    <footer>
+        <a href="javascript:void(0);" onclick="action1()"> <div class="ljcy">
+            立即参与
+        </div></a>
+        <div class="bg"></div>
+    </footer>
+</div>
+<div class="centerbox" id="box1">
+    <div class="center">
+        <div class="box1">
+            <div class="close"></div>
+            <div class="h1"><p>您已连续3天完成每日任务</p><p>恭喜获得5个纳币奖励</p></div>
+            <div class="img"><img src="../images/hd1/15g.png" width="101"></div>
+        </div>
+        <div class="box1">
+            <div class="close"></div>
+            <div class="h1"><p>您已连续7天完成每日任务</p><p>恭喜获得10个纳币奖励</p></div>
+            <div class="img"><img src="../images/hd1/15g.png" width="101"></div>
+        </div>
+        <div class="box1">
+            <div class="close"></div>
+            <div class="h1"><p>您已连续14天完成每日任务</p><p>恭喜获得15个纳币奖励</p></div>
+            <div class="img"><img src="../images/hd1/15g.png" width="101"></div>
+        </div>
+        <div class="box1">
+            <div class="close"></div>
+            <div class="h1"><p>您已连续21天完成每日任务</p><p>恭喜获得50个纳币</p></div>
+            <div class="img"><img src="../images/hd1/50g.png" width="169"></div>
+        </div>
+        <div class="box1">
+            <div class="close"></div>
+            <div class="h1"><p>您已连续21天完成每日任务</p><p>恭喜获得价值79元多纳绘本1套</p></div>
+            <div class="img"><img src="../images/hd1/huiben.png" width="140"></div>
+        </div>
+        <div class="box1">
+            <div class="close"></div>
+            <div class="h1 h2"><p>您已连续21天完成每日任务</p><p>恭喜获得价值198元多纳限量版书包1个</p></div>
+            <div class="img"><img src="../images/hd1/shubao.png" width="140"></div>
+        </div>
+        <div class="box1">
+            <div class="close"></div>
+            <div class="h1 h2"><p>您已连续21天完成每日任务</p><p>恭喜获得价值399元星空侠儿童安全<br>通话手表1个</p></div>
+            <div class="img"><img src="../images/hd1/biao.png" width="140"></div>
+        </div>
+    </div>
+
+    <div class="gray"></div>
+</div>
+<div class="centerbox" id="box2">
+    <div class="center">
+        <div class="box1">
+            <div class="close"></div>
+            <div class="h1">
+                <p>哇！您已连续21天完成每日任务</p>
+                   <p> 可以领取你的多纳宝盒啦。</p>
+            </div>
+            <div class="username">
+                <span class="sp1">姓名</span>
+                <input type="text" name="username" />
+            </div>
+            <div class="telphone">
+                <span class="sp1">手机</span>
+                <input type="text" name="telephone" />
+            </div>
+            <div class="dizhi">
+                <span class="sp1">地址</span>
+                <textarea type="text" name="address"></textarea>
+                <div class="tip">(请准确完善您的个人信息，以便收到奖品)</div>
+            </div>
+            <div class="input">
+                <div class="chongzhi">重置</div>
+                <div class="queding">确定</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="gray"></div>
+</div>
+</body>
+<script src="../js/zepto.min.js"></script>
+<script>
+
+    function show10g(num){
+        var box=$("#box1")
+        box.show()
+        $(".box1",box).hide().eq(num).show().addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $(this).removeClass( 'bounceInDown animated');
+            $(".img",box).eq(num).addClass('flip animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $(this).removeClass('flip animated');
+            });
+        });
+        $(".close",box).one("click",function(){
+            box.hide()
+        })
+    };
+    $.get("hd1_lq.html?userid=<%=userid%>",function(html){
+        $("#lingqu").html(html)
+        $("#lqrw3 strong").on("click",function(){
+            $("#lqrw3 strong").text("领取中……");
+            $.post(location.href,{
+                lqrw:"lqrw3"
+            },function(data){
+                if(data.code==0){
+                    show10g(0)
+                    $("#lqrw3 strong").removeClass("active2").text("已领取").off("click")
+                }else{
+                    cc.log(data)
+                }
+            })
+        })
+        $("#lqrw7 strong").on("click",function(){
+            $("#lqrw7 strong").text("领取中……");
+            $.post(location.href,{
+                lqrw:"lqrw7"
+            },function(data){
+                if(data.code==0){
+                    show10g(1)
+                    $("#lqrw7 strong").removeClass("active2").text("已领取").off("click")
+                }else{
+                    cc.log(data)
+                }
+            })
+        })
+        $("#lqrw14 strong").one("click",function(){
+            $("#lqrw14 strong").text("领取中……");
+            $.post(location.href,{
+                lqrw:"lqrw14"
+            },function(data){
+                if(data.code==0){
+                    show10g(2)
+                    $("#lqrw14 strong").removeClass("active2").text("已领取").off("click")
+                }
+            })
+        })
+        $("#lqrw21 strong").on("click",function(){
+            showdizhi(function(){
+                $("#lqrw21 strong").text("领取中……");
+                $.post(location.href,{
+                    lqrw:"lqrw21"
+                },function(data){
+                    if(data.code==0){
+                        if(data.message=="多纳绘本一套"){
+                            show10g(4)
+                        }
+                        if(data.message=="多纳双肩书包一个"){
+                            show10g(5)
+                        }
+                        if(data.message=="星空儿童安全手环一个"){
+                            show10g(6)
+                        }
+                        if(data.message=="50个纳币"){
+                            show10g(3)
+                        }
+                        $("#lqrw21 strong").removeClass("active2").text("已领取").off("click")
+                    }else{
+                        alert(data.message)
+                    }
+                })
+            })
+
+        })
+    })
+    $.get("hd1_list5.html",function(html){
+        $("#lqlist").html(html)
+    })
+    function showdizhi(callback){
+        var box=$("#box2")
+        box.show()
+        //确定
+        $(".queding",box).on("click",function(){
+            var data={
+                userid:"<%=userid%>",
+                username:$("[name=username]").val(),
+                telephone:$("[name=telephone]").val(),
+                address:$("[name=address]").val()
+            }
+            if(data.username==""){
+                alert("请输入您的姓名")
+                return;
+            }
+            if(!/^[\u4e00-\u9fa5]+$/gi.test(data.username)){
+                alert("请输入中文姓名")
+                return;
+            }
+            if(data.telephone==""){
+                alert("请输入您的手机号码")
+                return;
+            }
+            if(!/^[0-9]{11}$/.test(data.telephone)){
+                alert("请输入正确的手机号码")
+                return;
+            }
+            if(data.address.length<10){
+                alert("请输入您的详细地址")
+                return;
+            }
+            $(".queding",box).off("click")
+            $.post("/app/hd1_address",data,function(back){
+                box.hide()
+                alert(back.message)
+                if(back.code=="0"){
+                    callback()
+                }
+            })
+        })
+        //重置
+        $(".chongzhi",box).on("click",function(){
+            $("input",box).val("")
+        })
+        //关闭
+        $(".close",box).one("click",function(){
+            box.hide()
+        })
+    };
+</script>
+</html>

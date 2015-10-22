@@ -18,6 +18,9 @@
     "leanengine": "^0.1.4",
       "xml2js":"0.4.9",
       "needle":"0.10.0",
-      "eventproxy":"0.3.4"
+      "eventproxy":"0.3.4",
+      "transliteration":"0.1.1",
+      "underscore":"1.8.3",
+      "wind":"0.7.3"
   }
 }

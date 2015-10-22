@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>酷学多纳</title>
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../css/app1.css" media="screen">
+
+</head>
+<body>
+<div class="back"></div>
+<div class="app1">
+
+    <div class="row blo1">
+        <div class="title"><%=video.get("name")%></div>
+        <div class="info">
+            <video id="video" width="100%" poster="<%=video.get("andImagePath")._url%>" height="100%">
+                <source src="<%=video.get("videoPath")._url%>" type="video/ogg">
+                <source src="<%=video.get("videoPath")._url%>" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="btn" id="btn">
+            </div>
+        </div>
+        <a href="wangqi.html" class="chakanwangqiniu"></a>
+        <div class="zan">
+            <span class="icon icon-thumbs-up"></span>点赞
+            <div class="num"><%=video.get("likeNumber")%></div>
+        </div>
+        <div class="sc">
+            <span class="icon icon-heart"></span>收藏
+        </div>
+        <div class="load">
+            <span class="icon icon-download-alt"></span>下载
+        </div>
+    </div>
+
+    <div class="row blo2">
+        <div class="szimg"></div>
+        <div class="tip">
+            你喜欢今天的话题吗？<br>如果你有兴趣的话题请在回复栏里里回复，下期话题可能就是你的啦！
+            <span class="icon"></span>
+        </div>
+        <div class="info">
+            <input type="text" class="text" placeholder="说点什么？让小编更努力工作。">
+            <div class="huifu">回复</div>
+        </div>
+    </div>
+    <div class="row blo3">
+        <div class="title">全部评论（<%=count%>）</div>
+        <div class="info row">
+            <%_.each(videoPosts,function(v,k){%>
+            <div class="list">
+                 <img class="head" src="http://ac-lr1n10n8.clouddn.com/KGCcTwkZf16OOGc4USUj8TSC3pQdKI1Wqjornvfs">
+
+                <div class="username">LXY西风<span class="posttime"><%=v.text%>前：</span></div>
+                <div class="postinfo"><%=v.get("context")%></div>
+                <span class="fnum"><%=videoPosts.length-k%>F</span>
+                <div class="zannum"><span class="icon icon-thumbs-up"></span>(<%=v.get("likeNumber")%>)</div>
+                <div class="point icon-map-marker"></div>
+            </div>
+            <%})%>
+        </div>
+        <div class="bottom"></div>
+    </div>
+
+</div>
+<script src="../js/require.js"></script>
+<script src="../src/config.js"></script>
+<script>
+    requirejs(["app1"]);
+</script>
+</body>
+</html>

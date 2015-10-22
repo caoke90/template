@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>酷学多纳</title>
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../css/hd1.css" media="screen">
+
+</head>
+<body>
+
+<div class="hd1">
+
+    <header class="header">
+        <a href="javascript:history.go(-1);"><img src="../images/hd1/jiaodiantu_1.png" width="100%"></a>
+    </header>
+    <section>
+        <div class="huojiangmingdan clearfix">
+            <a href="javascript:history.go(-1);" class="back">返回</a>
+            <ul>
+                <%for(var i=0;i<parseInt(lists.length/5+1)*5;i++){%>
+                <%var item=lists[i]%>
+                <%if(item){%>
+                <li>
+                    <img src="<%=item.get("head")&&item.get("head").url()%>" />
+                    <div class="username"><%=item.get("username")%></div>
+                    <div class="text"><%=item.get("boxInfo")%></div>
+                </li>
+                <%}else{%>
+                <li class="no"></li>
+                <%}}%>
+            </ul>
+            <span></span>
+        </div>
+        <div class="di"></div>
+
+    </section>
+</div>
+<div class="centerbox" id="box1">
+    <div class="center">
+        <div class="box1">
+            <div class="close"></div>
+            <div class="h1"><p>您已连续3天完成每日任务</p><p>恭喜获得5个纳币奖励</p></div>
+            <div class="img"><img src="../images/hd1/10g.png" width="101" height="60"></div>
+        </div>
+        <div class="box1">
+            <div class="close"></div>
+            <div class="h1"><p>您已连续7天完成每日任务</p><p>恭喜获得10个纳币奖励</p></div>
+            <div class="img"><img src="../images/hd1/10g.png" width="101" height="60"></div>
+        </div>
+        <div class="box1">
+            <div class="close"></div>
+            <div class="h1"><p>您已连续14天完成每日任务</p><p>恭喜获得15个纳币奖励</p></div>
+            <div class="img"><img src="../images/hd1/10g.png" width="101" height="60"></div>
+        </div>
+        <div class="box1">
+            <div class="close"></div>
+            <div class="h1"><p>您已连续21天完成每日任务</p><p>恭喜获得50个纳币</p></div>
+            <div class="img"><img src="../images/hd1/50g.png" width="169"></div>
+        </div>
+        <div class="box1">
+            <div class="close"></div>
+            <div class="h1"><p>您已连续21天完成每日任务</p><p>恭喜获得价值79元多纳绘本1套</p></div>
+            <div class="img"><img src="../images/hd1/huiben.png" width="169"></div>
+        </div>
+        <div class="box1">
+            <div class="close"></div>
+            <div class="h1"><p>您已连续21天完成每日任务</p><p>恭喜获得价值198元多纳限量版书包1个</p></div>
+            <div class="img"><img src="../images/hd1/shubao.png" width="169"></div>
+        </div>
+        <div class="box1">
+            <div class="close"></div>
+            <div class="h1 h2"><p>您已连续21天完成每日任务</p><p>恭喜获得价值399元星空侠儿童安全通话手表1个</p></div>
+            <div class="img"><img src="../images/hd1/biao.png" width="169"></div>
+        </div>
+    </div>
+
+    <div class="gray"></div>
+</div>
+</body>
+</html>

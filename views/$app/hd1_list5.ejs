@@ -1,0 +1,11 @@
+<%for(var i=0;i<5;i++){%>
+<%var item=lists[i]%>
+<%if(item){%>
+<li>
+    <img src="<%=item.get("head")&&item.get("head").url()%>" />
+    <div class="username"><%=item.get("username")%></div>
+    <div class="text"><%=item.get("boxInfo")%></div>
+</li>
+<%}else{%>
+<li class="no"></li>
+<%}}%>

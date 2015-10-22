@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/audio2.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/share.js"></script>
+    <title>多纳爱学习</title>
+
+    <style>
+
+        #red{
+            width: 80%;
+            margin: 0px auto;
+            height: 4px;
+            border: 0px;
+            background-color: RGB(25,160,42);
+        }
+        #red .ui-widget-content{
+            background-image: none;
+            background-color: RGB(25,132,42);
+
+        }
+        #red .ui-slider-range { 
+            background: RGB(254,197,46);
+            border-color: RGB(254,197,46);
+            /*border-radius: 5px;*/
+            padding: 0px;
+
+        }
+
+        #red .ui-slider-handle { 
+            /*border-color:#ffc600;*/
+            background-color: RGB(254,197,46);
+            border-radius: 45px;
+            width: 15px;
+            height: 15px;
+            border: 0px;
+        }
+        #downloadDiv{
+            width: 250px;
+            height: 120px;
+            /*background-color: #1b6d85;*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -60px;
+            margin-left: -125px;
+        }
+        #downloadDiv2{
+            width: 60%;
+            height: 100%;
+            /*background-color: red;*/
+            position: absolute;
+        }
+        #downloadDiv3{
+            width: 40%;
+            height: 100%;
+            /*background-color: blue;*/
+            position: absolute;
+            margin-left: 60%;
+        }
+        .btn12 {
+            position: relative;
+            text-align: center;
+            /*display: inline-block;*/
+            background: RGB(182,204,11);
+            color: RGB(182,204,11);
+            font-size: 30px;
+            -moz-border-radius: 0px 0px 10px 10px;
+            -webkit-border-radius: 0px 0px 10px 10px;
+            border-radius: 0px 0px 10px 10px;
+            -moz-box-shadow: RGB(11,70,24) 0px 5px 0px;
+            -webkit-box-shadow: RGB(11,70,24) 0px 5px 0px;
+            box-shadow: RGB(11,70,24) 0px 5px 0px;
+            font-family: "FZY4JW";
+            /*line-height: 57.5px;*/
+            padding: 25px 25px;
+        }
+        .downloadbtn {
+            text-align: center;
+            display: inline-block;
+            background: #fe5933;
+            color: #fff;
+            font-size: 20px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            -moz-box-shadow: #e23521 0px 5px 0px;
+            -webkit-box-shadow: #e23521 0px 5px 0px;
+            box-shadow: #e23521 0px 5px 0px;
+            font-family: "FZY4JW";
+            line-height: 45px;
+            padding: 0 25px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+
+            var d=$( "#red" ).slider({
+                orientation: "horizontal",
+                range: "min",
+                max: 100,
+                value: 0,
+                step:1
+            });
+            $( "#red" ).slider( "value", 0);
+            //audio对象添加loadeddata监听
+            var aaudio = $("audio#audioplayer")[0];
+            aaudio.addEventListener("timeupdate",
+                    function(e){
+                        if(!isNaN(aaudio.duration)){
+                            var avalue = (aaudio.currentTime/aaudio.duration)*100;
+                            $("#red").slider("value",0|avalue);
+                        }
+            },false);
+            aaudio.addEventListener("ended",
+                    function(e){
+                        $("img#audiobutton").css({"animation-play-state":"paused"})
+                        $("img#playandpause").attr("src","images/audio/btn-play.png");
+                        $("#red").slider("value",0);
+                    },false);
+            var a= $("img#audiobutton,#playandpause");
+            a.on("click",function(){
+
+                var a=$("img#audiobutton")
+                var playBt = $("img#playandpause");
+                if(a.css("animation-play-state")=="paused"){
+                    playBt.attr("src","images/audio/btn-pause.png");
+                    a.css({"animation-play-state":"running"})
+                    $("audio#audioplayer")[0].play();
+                }else{
+                    playBt.attr("src","images/audio/btn-play.png");
+                    a.css({"animation-play-state":"paused"})
+                    $("audio#audioplayer")[0].pause();
+                }
+            })
+        });
+    </script>
+</head>
+<body style="background-color: RGB(26,142,34)">
+
+<div class="btn12" id="div1">
+    <audio id="audioplayer" src=<%= result.get('audioPath').url()%> controls="controls" autoplay="ture" style="display: none"></audio>
+
+    <div style="width: 200px;height: 200px;margin: 0px auto;position: relative;">
+        <img id ="audiobutton" src="images/audio/test.jpg" class="img-circle center-block rotating" width="200" height="200">
+        <img id ="playandpause" src="images/audio/btn-pause.png" style="position:absolute ;width:50px;height:50px;top:75px;left: 75px;">
+    </div>
+</div>
+
+<div id="div2">
+    <h3 class="text-center" style="padding: 0px 20px;color: RGB(254,197,46)"><%= result.get('name')%></h3>
+    <div id="red"></div>
+</div>
+
+<div id="download" style="background-color: #ffc600;height: 150px;position: relative;">
+
+    <div id="downloadDiv">
+
+        <div id="downloadDiv2">
+            <p style="margin-top: 15px;color: RGB(116,41,27); font-size: 15px">想去看更多好玩有趣的动画吗?快去下载吧!</p>
+            <div class="downloadbtn" onclick="downloadBtClicked()">
+                下载有礼
+            </div>
+        </div>
+        <div id="downloadDiv3">
+            <img style="margin-top: 15px;" src="icon_180.png" width="100" height="100">
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+<script>
+
+    var height=$(window).height()
+    var height1 = $('#div1').height();
+    var height2 = $('#div2').height();
+    var height3 = $("#download").height();
+
+    $("#download").css("margin-top",height-height1-height2-height3-height3/2);
+</script>
+
+</html>

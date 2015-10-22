@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><%=item.title%></title>
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../css/weixin.css" media="screen">
+</head>
+<body>
+<div class="weixin">
+    <section class="section" style="overflow: hidden">
+        <div class="section_top">
+            <div class="header">
+                <!--<a href="shop"><img src="../images/weixin/left.png"></a>-->
+                <!--<a href="shop"><img src="../images/weixin/share.png"></a>-->
+            </div>
+            <div class="cd">
+                <a href="?index=<%=index-1%>" class="icon-caret-left icon-3x"></a>
+                <div class="cd-list">
+                    <img src="<%=iteminfo.track.cover_url_middle%>" class="rotating" id="translateImg">
+                    <div>
+                        <span></span>
+                    </div>
+                </div>
+                <a href="?index=<%=index+1%>" class="icon-caret-right icon-3x" id="nextpage"></a>
+            </div>
+            <div class="bone">
+                <img src="../images/weixin/bone.png">
+            </div>
+            <p><%=iteminfo.track.nickname%></p>
+            <div class="section_foot">
+                <span class="icon-music icon-2x"></span>
+                <span><%=iteminfo.track.plays_count%></span>
+                <span class="icon-heart icon-2x"></span>
+                <span style='color: #159b2e;font-family: "Microsoft Yahei";'><%=iteminfo.track.favorites_count%></span>
+            </div>
+        </div>
+        <div class="song_list">
+            <h3><%=iteminfo.track.title%></h3>
+            <div class="rang">
+                <span></span>
+                <span id="durationBg"></span>
+                <span id="durationRound"></span>
+                <span id="opacity"></span>
+            </div>
+            <div class="btn">
+                <a href="?index=<%=index-1%>"><span  class="icon-step-backward incon-2x"></span></a>
+                <strong id="backward" class="icon-backward incon-2x"></strong>
+                <strong class="icon-play icon-2x" id="audiobutton"></strong>
+                <strong  id="forward" class="icon-forward incon-2x"></strong>
+                <a href="?index=<%=index+1%>"><span  class="icon-step-forward incon-2x"></span></a>
+            </div>
+            <div><img ></div>
+        </div>
+        <audio id="audioplayer" style="display: none">
+            <source src="<%=item.play_url_64%>" type="audio/mpeg">
+        </audio>
+    </section>
+    <footer class="footer">
+        <div>
+            <ul>
+                <li></li><li></li><li></li><li></li><li></li><li></li>
+            </ul>
+            <ul>
+                <li></li><li></li><li></li><li></li><li></li><li></li>
+            </ul>
+            <ul>
+                <li></li><li></li><li></li><li></li><li></li><li></li>
+            </ul>
+            <ul>
+                <li></li><li></li><li></li><li></li><li></li><li></li>
+            </ul>
+            <ul>
+                <li></li><li></li><li></li><li></li><li></li><li></li>
+            </ul>
+            <ul>
+                <li></li><li></li><li></li><li></li><li></li><li></li>
+            </ul>
+            <ul>
+                <li></li><li></li><li></li><li></li><li></li><li></li>
+            </ul>
+            <ul>
+                <li></li><li></li><li></li><li></li><li></li><li></li>
+            </ul>
+            <ul>
+                <li></li><li></li><li></li><li></li><li></li><li></li>
+            </ul>
+            <ul>
+                <li></li><li></li><li></li><li></li><li></li><li></li>
+            </ul>
+            <ul>
+                <li></li><li></li><li></li><li></li><li></li><li></li>
+            </ul>
+            <ul>
+                <li></li><li></li><li></li><li></li><li></li><li></li>
+            </ul>
+            <ul>
+                <li></li><li></li><li></li><li></li><li></li><li></li>
+            </ul>
+            <ul>
+                <li></li><li></li><li></li><li></li><li></li><li></li>
+            </ul>
+            <ul>
+                <li></li><li></li><li></li><li></li><li></li><li></li>
+            </ul>
+        </div>
+
+    </footer>
+
+</div>
+<script src="../js/zepto.min.js"></script>
+<script>
+
+    var audio=$("#audioplayer");
+    var btn=$("#audiobutton");
+    var png=$("#translateImg")
+    //旋转图片元素
+    png.css({"animation-play-state":"paused","-webkit-animation-play-state":"paused"})
+    $('.footer ul').css('animation-play-state',"paused")
+    $("#audiobutton,#translateImg").click(function () {
+        if(btn.hasClass("icon-play")){
+            audio[0].play();
+        }else{
+            audio[0].pause();
+        }
+    })
+
+    //滑动条
+    audio[0].addEventListener("play",function(e){
+        btn.removeClass("icon-play").addClass("icon-pause");
+        png.css({"animation-play-state":"running","-webkit-animation-play-state":"running"})
+        $('.footer ul').css('animation-play-state',"running")
+    });
+    audio[0].addEventListener("pause",function(e){
+        png.css({"animation-play-state":"paused","-webkit-animation-play-state":"paused"})
+        btn.removeClass("icon-pause").addClass("icon-play");
+        $('.footer ul').css('animation-play-state',"paused")
+    });
+    audio[0].addEventListener("timeupdate",function(e){
+        if(!isNaN(audio[0].duration)){
+            var width=$("#opacity").width()
+            var avalue = (audio[0].currentTime/audio[0].duration)*width;
+            $("#durationBg").css("width",avalue);
+            $("#durationRound").css("left",avalue)
+        }
+    });
+    audio[0].addEventListener("ended",function(e){
+
+    });
+    audio[0].addEventListener("canplay",function(e){
+        audio[0].play()
+    });
+    $("#backward").click(function(){
+        audio[0].currentTime=audio[0].currentTime-audio[0].duration*0.05
+    })
+    $("#forward").click(function(){
+        audio[0].currentTime=audio[0].currentTime+audio[0].duration*0.05
+
+    })
+</script>
+</body>
+</html>

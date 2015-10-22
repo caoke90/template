@@ -1,15 +1,64 @@
 ({
-    baseUrl: ".",
-    mainConfigFile: '../src/main.js',
+    baseUrl: "./",
     appDir: "../src",
     dir: "../dist",
-    paths:{
-        jquery: "../js/jquery-1.11.3.min",
-        weixin: "../js/jweixin-1.0.0"
-    },
+    optimizeCss: "standard.keepLines",
+    mainConfigFile: "../src/config.js",
+    separateCSS: true,
     modules: [
         {
-            name: "test"
+            name: "page0",
+            exclude: [
+                "jquery"
+            ]
+        },
+        {
+            name: "page1",
+            exclude: [
+                "jquery"
+            ]
+        },
+        {
+            name: "page2",
+            exclude: [
+                "jquery"
+            ]
+        },
+        {
+            name: "page3",
+            exclude: [
+                "jquery"
+            ]
+        },
+        {
+            name: "page4",
+            exclude: [
+                "jquery"
+            ]
+        },
+        {
+            name: "page5",
+            exclude: [
+                "jquery"
+            ]
+        },
+        {
+            name: "page6",
+            exclude: [
+                "jquery"
+            ]
+        },
+        {
+            name: "login",
+            exclude: [
+                "jquery"
+            ]
+        },
+        {
+            name: "play1",
+            exclude: [
+                "jquery"
+            ]
         }
     ]
 })
